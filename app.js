@@ -61,14 +61,14 @@ const db = mysql.createConnection({
 
 
 const httpsOptions = {
-  key: fs.readFileSync('/opt/bitnami/letsencrypt/certificates/m2ost.com.key'),
-  cert: fs.readFileSync('/opt/bitnami/letsencrypt/certificates/m2ost.com.crt'),
+  key: fs.readFileSync('/opt/bitnami/apache/conf/m2ost.com.key'),
+  cert: fs.readFileSync('/opt/bitnami/apache/conf/m2ost.com.crt'),
  // passphrase: 'Tgc@0987'
 
 };
 
-const server = https.createServer(app).listen(8080, () => {
-  console.log("Server running on https://localhost:8080/");
+const server = https.createServer(app).listen(3000, () => {
+  console.log("Server running on https://localhost:3000/");
 });
 
 // const httpsOptions = {
